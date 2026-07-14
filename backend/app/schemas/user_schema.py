@@ -18,3 +18,10 @@ class UserResponse(BaseModel):
 
     class Config:
         from_attributes = True
+from typing import Optional
+
+class UserUpdate(BaseModel):
+    name: Optional[str] = None
+    email: Optional[EmailStr] = None
+    role: Optional[str] = None
+
